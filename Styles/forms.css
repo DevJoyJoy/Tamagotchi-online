@@ -23,32 +23,18 @@
     height: auto;
 }
 
-.menu {
-    width: 10vw;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    font-size: large;
-    padding: 1vw;
-    gap: 1.5vw;
-    background-color: #ff8fab;
-    position: fixed;
-    top: 10vh;
-}
-
 .background {
-    width: calc(100% - 10vw); 
+    width: 100vw; 
     min-height: 90vh;
-    background-color: #ffb3c6;
+    background-image: url("../Images/Backgrounds/House.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 10vw;
     margin-top: 10vh;
-    padding: 3vw 0vw;
     overflow-x: hidden;
 }
 
