@@ -7,16 +7,20 @@
     <title>Tamagotchi</title>
 </head>
 <body>
+    <!-- Header on top of the page -->
     <div class="header">
         <img src="../Images/Icons/PurpleStar.png" alt="">
         <p>Tamagotchi.online</p>
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
+    <!-- Div for the background -->
     <div class="background">
+
+        <!-- Pink box with all the inputs to create the pet -->
         <div class="boxInputs">
-            <div class="firstRow">
-                
+            <!-- Align the text inputs and the pets carroussel -->
+            <div class="firstRow">   
                 <div>
                     <p class="titles">Seu nome</p>
                     <input type="text" name="" id="" placeholder="Digite seu nome: ">
@@ -25,6 +29,7 @@
                     <input type="text" name="" id="" placeholder="Digite o nome do pet: ">
                 </div>
 
+                <!-- Pets carroussel -->
                 <div class="carroussel size-pet">
                     <div class="carroussel-container">
                         <img src="../Images/Pets/CalicoCat.png" alt="Pet 1" class="pet-img">
@@ -40,7 +45,7 @@
                 </div>
             </div>
 
-
+            <!-- Carroussel for the toys -->
             <p class="titles">Brinquedo favorito:</p>
             <div class="carroussel size-item">
                 <div class="carroussel-container">
@@ -54,7 +59,7 @@
                 <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
 
-
+            <!-- Carroussel for the beds -->
             <p class="titles">Cor da cama do pet:</p>
             <div class="carroussel size-item">
                 <div class="carroussel-container">
@@ -68,9 +73,14 @@
                 <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
                 <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
-            <button class="buttonStart">Começar</button>
+    
+            <!-- Button to confirm the informations -->
+            <button class="buttonStart">
+                <a href="formsAction.html">Começar</a>
+            </button>
         </div>
     </div>
+
     <script src="../Scripts/Script.js"></script>
 </body>
 </html>

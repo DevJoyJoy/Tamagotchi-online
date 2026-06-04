@@ -1,3 +1,4 @@
+/* Whole page settings */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     color: white;
 }
 
+/* Style for the header */
 .header {
     width: 100%;
     height: 10vh;
@@ -18,11 +20,13 @@
     top: 0;
 }
 
+/* Style for the header images */
 .header img {
     width: 4vw;
     height: auto;
 }
 
+/* Style for the menu */
 .menu {
     width: 10vw;
     height: 90vh;
@@ -38,6 +42,7 @@
     top: 10vh;
 }
 
+/* Style for the background */
 .background {
     width: calc(100% - 10vw); 
     min-height: 90vh;
@@ -52,6 +57,7 @@
     overflow-x: hidden;
 }
 
+/* Style for the div with the texts */
 .text {
     width: 90%;
     height: auto;
@@ -60,15 +66,18 @@
     gap: 5vw;
 }
 
+/* Style for the image in the div with the texts */
 .text img {
     width: 10vw;
     height: auto;
 }
 
+/* Title for which paragraph */
 .title {
     font-size: xx-large;
     font-weight: bold;
 }
+
 
 .who {
     text-align: right;

@@ -1,3 +1,4 @@
+/* Whole page settings */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     color: white;
 }
 
+/* Style for the header */
 .header {
     width: 100%;
     height: 10vh;
@@ -18,15 +20,17 @@
     top: 0;
 }
 
+/* Style for the header images */
 .header img {
     width: 4vw;
     height: auto;
 }
 
+/* Style for the background */
 .background {
     width: 97.2vw; 
     min-height: 84vh;
-    background-image: url("../Images/Backgrounds/House.png");
+    background-image: url("../Images/Backgrounds/Farm.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,6 +43,7 @@
     overflow-x: hidden;
 }
 
+/* Pink box with the inputs */
 .boxInputs {
     width: 37vw;
     height: 77vh;
@@ -51,6 +56,7 @@
     padding: 3vh;
 }
 
+/* Style fot the inputs box */
 .boxInputs input{
     width: 15vw;
     border-radius: 10px;
@@ -60,6 +66,7 @@
     color: gray;
 }
 
+/* Aligning all the input boxes and the carroussel */
 .firstRow {
     display: flex;
     gap: 9vh;
@@ -67,6 +74,7 @@
     justify-content: center;
 }
 
+/* Style fot the main carroussel */
 .carroussel {
     position: relative;
     overflow: hidden;
@@ -76,6 +84,7 @@
     align-items: center;
 }
 
+/* Container for the images themselves */
 .carroussel-container {
     display: flex;
     width: 100%;
@@ -83,17 +92,20 @@
     transition: transform 0.5s ease-in-out;
 }
 
+/* Specific size of box for the pets */
 .size-pet {
     width: 200px; 
     height: 200px;
 }
 
+/* Specific size of box for the toys/beds */
 .size-item {
     width: 150px;
     height: 100px;
     margin-bottom: 2vh;
 }
 
+/* Specific size of images for the pets */
 .pet-img {
     width: 100%;
     height: 100%;
@@ -101,6 +113,7 @@
     flex-shrink: 0;
 }
 
+/* Carroussel buttons */
 .btn-carroussel {
     position: absolute;
     top: 50%;
@@ -114,6 +127,7 @@
     z-index: 10;
 }
 
+/* Button hover */
 .btn-carroussel:hover {
     background-color: #ad6879;
 }
@@ -121,10 +135,12 @@
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Style for the titles */
 .titles {
     font-size: x-large;
 }
 
+/* Style for the start button */
 .buttonStart {
     width: 40%;
     height: 10%;
@@ -134,6 +150,10 @@
     border-radius: 10px;
     transition: .5s;
     cursor: pointer;
+}
+
+.buttonStart a {
+    text-decoration: none;
 }
 
 .buttonStart:hover{

@@ -1,18 +1,17 @@
 function moveSlide(button, direction) {
-    // 1. Encontra o elemento pai (.carroussel) do botão clicado
+    // Finds the clicked element (the carroussel that's gonna change)
     const wrapper = button.closest('.carroussel');
     
-    // 2. Dentro desse pai, encontra o container das imagens
+    // Finds the actual container with the images
     const container = wrapper.querySelector('.carroussel-container');
     
-    // 3. Pega a quantidade de imagens que tem nesse carrossel específico
+    // Takes the lenght of images in the carroussel
     const totalSlides = container.children.length;
 
-    // 4. Vamos guardar o índice atual no próprio elemento HTML (usando dataset)
-    // Se não existir, começa no 0
+    // Garantees that there's always a image showing
     let currentIdx = parseInt(container.dataset.index) || 0;
 
-    // 5. Calcula o novo índice
+    // Calculates the next index image
     currentIdx += direction;
 
     if (currentIdx >= totalSlides) {
@@ -21,7 +20,7 @@ function moveSlide(button, direction) {
         currentIdx = totalSlides - 1;
     }
 
-    // 6. Salva o novo índice e aplica o movimento
+    // Applicates the movement
     container.dataset.index = currentIdx;
     container.style.transform = `translateX(${-currentIdx * 100}%)`;
 }

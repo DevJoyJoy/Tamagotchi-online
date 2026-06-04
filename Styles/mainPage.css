@@ -1,3 +1,4 @@
+/* Whole page settings */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     color: white;
 }
 
+/* Pink background */
 .background{
     width: 100vw;
     height: 100vh;
@@ -15,11 +17,13 @@
     justify-content: center;
 }
 
+/* Image with the main title */
 .background > img {
     width: 65vw;
     height: auto;
 }
 
+/* Div with the options buttons */
 .optionsBox{
     display: flex;
     flex-direction: column;
@@ -27,6 +31,7 @@
     justify-content: center;
 }
 
+/* Style for the list */
 .options {
     display: flex;
     flex-direction: row;
@@ -34,11 +39,13 @@
     gap: 28vw;
 }
 
+/* Div with the option itself */
 .option { 
     display: flex;
     font-size: x-large;
 }
 
+/* Style to turn the link into the size of the button */
 .option a {
     display: flex;
     flex-direction: column;
@@ -51,6 +58,7 @@
     cursor: pointer;
 }
 
+/* Style for the button image */
 .options img {
     width: 5vw;
     height: auto;
