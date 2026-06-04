@@ -24,17 +24,118 @@
 }
 
 .background {
-    width: 100vw; 
-    min-height: 90vh;
+    width: 97.2vw; 
+    min-height: 84vh;
     background-image: url("../Images/Backgrounds/House.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-end;
+    justify-content: center;
     margin-top: 10vh;
+    padding: 3vh;
     overflow-x: hidden;
 }
 
+.boxInputs {
+    width: 37vw;
+    height: 77vh;
+    background-color: #ffb3c6;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+}
+
+.boxInputs input{
+    width: 15vw;
+    border-radius: 10px;
+    border: none;
+    padding: 1vh;
+    font-size: large;
+    color: gray;
+}
+
+.firstRow {
+    display: flex;
+    gap: 9vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.carroussel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.carroussel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.size-pet {
+    width: 200px; 
+    height: 200px;
+}
+
+.size-item {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 2vh;
+}
+
+.pet-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.btn-carroussel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff8fab;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.btn-carroussel:hover {
+    background-color: #ad6879;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.titles {
+    font-size: x-large;
+}
+
+.buttonStart {
+    width: 40%;
+    height: 10%;
+    background-color: #ff8fab;
+    font-size: x-large;
+    border: none;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.buttonStart:hover{
+    background-color: #ad6879;
+}

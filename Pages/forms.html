@@ -14,7 +14,63 @@
     </div>
 
     <div class="background">
-        
+        <div class="boxInputs">
+            <div class="firstRow">
+                
+                <div>
+                    <p class="titles">Seu nome</p>
+                    <input type="text" name="" id="" placeholder="Digite seu nome: ">
+                    <br><br>
+                    <p class="titles">Nome do pet</p>
+                    <input type="text" name="" id="" placeholder="Digite o nome do pet: ">
+                </div>
+
+                <div class="carroussel size-pet">
+                    <div class="carroussel-container">
+                        <img src="../Images/Pets/CalicoCat.png" alt="Pet 1" class="pet-img">
+                        <img src="../Images/Pets/OrangeCat.png" alt="Pet 4" class="pet-img">
+                        <img src="../Images/Pets/CaramelDog.png" alt="Pet 2" class="pet-img">
+                        <img src="../Images/Pets/HuskyDog.png" alt="Pet 3" class="pet-img">
+                        <img src="../Images/Pets/Pigeon.png" alt="Pet 5" class="pet-img">
+                        <img src="../Images/Pets/Rabbit.png" alt="Pet 6" class="pet-img">
+                    </div>
+                    
+                    <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
+            </div>
+
+
+            <p class="titles">Brinquedo favorito:</p>
+            <div class="carroussel size-item">
+                <div class="carroussel-container">
+                    <img src="../Images/Toys/ColorfulRope.png" alt="Toy 1" class="pet-img">
+                    <img src="../Images/Toys/RatToy.png" alt="Toy 2" class="pet-img">
+                    <img src="../Images/Toys/TennisBall.png" alt="Toy 3" class="pet-img">
+                    <img src="../Images/Toys/YarnBall.png" alt="Toy 4" class="pet-img">
+                </div>
+                
+                <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+
+
+            <p class="titles">Cor da cama do pet:</p>
+            <div class="carroussel size-item">
+                <div class="carroussel-container">
+                    <img src="../Images/Beds/Acquamarine.png" alt="Bed 1" class="pet-img">
+                    <img src="../Images/Beds/Blue.png" alt="Bed 2" class="pet-img">
+                    <img src="../Images/Beds/Pink.png" alt="Bed 3" class="pet-img">
+                    <img src="../Images/Beds/Yellow.png" alt="Bed 4" class="pet-img">
+                    <img src="../Images/Beds/Green.png" alt="Bed 5" class="pet-img">
+                </div>
+                
+                <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <button class="buttonStart">Começar</button>
+        </div>
     </div>
+    <script src="../Scripts/Script.js"></script>
 </body>
 </html>
