@@ -3,18 +3,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"  type="png" href="../Images/Icons/PurpleStar.png" />
-    <link rel="stylesheet" href="../Styles/forms.css">
+    <link rel="stylesheet" href="../Styles/formsAction.css">
     <title>Tamagotchi</title>
 </head>
 <body>
+    <!-- Header on top of the page -->
     <div class="header">
         <img src="../Images/Icons/PurpleStar.png" alt="">
         <p>Tamagotchi.online</p>
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
+    <!-- Farm background -->
     <div class="background">
-         </div>
+        <!-- Title with the name of the player and the pet -->
+        <p>Tamagotchi da <span id="ownerNameDisplay">*dona*</span> | Pet: <span id="petNameDisplay">*pet*</span></p>
+
+        <!-- Box with all the game elements -->
+        <div class="objectsBox">
+            <!-- Reserve images in case the player doesn't have a pet yet  -->
+            <img id="bedDisplay" src="../Images/Beds/Blue.png" alt="">
+            <img id="petDisplay" src="../Images/Pets/CalicoCat.png" alt="">
+            <img id="toyAnimationDisplay" src="" alt="" class="toyAnimation">
+            <img id="treatAnimationDisplay" src="" alt="" class="toyAnimation">
+
+            <!-- Pink box with the animation options -->
+            <div class="boxInputs">
+                <div class="actionButton" id="btnPlay">
+                    <img src="../Images/Toys/ColorfulRope.png" alt="">
+                    <p>Brincar</p>
+                </div>
+                <div class="actionButton" id="feedPlay">
+                    <img src="../Images/Treats/StarTreat.png" alt="">
+                    <p>Comer</p>
+                </div>
+                <div class="actionButton">
+                    <img src="../Images/Beds/Blue.png" alt="">
+                    <p>Descansar</p>
+                </div>
+            </div>
+    
+        </div>
+    </div>
     <script src="../Scripts/Script.js"></script>
 </body>
 </html>
