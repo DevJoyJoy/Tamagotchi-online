@@ -110,13 +110,13 @@ window.addEventListener("DOMContentLoaded", () => {
             const favoriteToy = localStorage.getItem('tamagotchiToyImg') || '../Images/Toys/ColorfulRope.png'
             animatedToy.src = favoriteToy;
 
-            pet.classList.add('petJumpEffect');
+            pet.classList.add('petPlayEffect');
             animatedToy.classList.add('toyFlyEffect')
         });
 
         // Removing the animation after it's done so we can play again
         pet.addEventListener('animationend', () => {
-            pet.classList.remove('petJumpEffect');
+            pet.classList.remove('petPlayEffect');
         });
 
         animatedToy.addEventListener('animationend', () => {
@@ -152,5 +152,27 @@ window.addEventListener("DOMContentLoaded", () => {
         animatedTreat.addEventListener('animationend', () => {
             animatedTreat.classList.remove('toyFlyEffect');
         });
+    }
+})
+//===========================================================================
+// Function to put the pet to sleep
+//===========================================================================
+window.addEventListener("DOMContentLoaded", () => {
+    // Getting all the necessary items
+    const sleepPlay = document.getElementById('sleepPlay');
+    const pet = document.getElementById('petDisplay');
+
+    // Animate after having all the items
+    if (sleepPlay && pet) {
+        sleepPlay.addEventListener('click', () => {
+
+            pet.classList.add('petSleepEffect');
+        });
+
+        // Removing the animation after it's done so we can feed the pet again
+        pet.addEventListener('animationend', () => {
+            pet.classList.remove('petSleepEffect');
+        });
+
     }
 })

@@ -63,8 +63,6 @@
 
 /* Div with the option itself */
 .option { 
-    background-color: #ff8fab;
-    padding: 1vw;
     border-radius: 10px;
     display: flex;
     font-size: x-large;
