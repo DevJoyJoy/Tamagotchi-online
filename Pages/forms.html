@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"  type="png" href="../Images/Icons/PurpleStar.png" />
     <link rel="stylesheet" href="../Styles/forms.css">
+    <link rel="stylesheet" href="../Styles/general.css">
     <title>Tamagotchi</title>
 </head>
 <body>
@@ -14,19 +15,27 @@
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
+    <!-- Menu with the other pages -->
+    <div class="menu">
+        <a href="../index.html">Página inicial</a>
+        <a href="./about.html">Sobre o site</a>
+        <a href="./options.html">Opções</a>
+        <a href="./forms.html">Criar pet</a>
+    </div>
+
     <!-- Div for the background -->
     <div class="background">
 
         <!-- Pink box with all the inputs to create the pet -->
-        <div class="boxInputs">
+        <form class="boxInputs" method="GET" action="formsAction.html">
             <!-- Align the text inputs and the pets carroussel -->
             <div class="firstRow">   
                 <div>
                     <p class="titles">Seu nome*</p>
-                    <input type="text" name="" id="ownerName" placeholder="Digite seu nome: " required>
+                    <input type="text" name="ownerName" id="ownerName" placeholder="Digite seu nome: " required>
                     <br><br>
                     <p class="titles">Nome do pet*</p>
-                    <input type="text" name="" id="petName" placeholder="Digite o nome do pet: " required>
+                    <input type="text" name="petName" id="petName" placeholder="Digite o nome do pet: " required>
                 </div>
 
                 <!-- Pets carroussel -->
@@ -40,8 +49,8 @@
                         <img src="../Images/Pets/Rabbit.png" alt="Pet 6" class="pet-img">
                     </div>
                     
-                    <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
-                    <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    <button type="button" class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button type="button" class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
                 </div>
             </div>
 
@@ -55,8 +64,8 @@
                     <img src="../Images/Toys/YarnBall.png" alt="Toy 4" class="pet-img">
                 </div>
                 
-                <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
-                <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+                <button type="button" class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button type="button" class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
 
             <!-- Carroussel for the beds -->
@@ -70,15 +79,19 @@
                     <img src="../Images/Beds/Green.png" alt="Bed 5" class="pet-img">
                 </div>
                 
-                <button class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
-                <button class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
+                <button type="button" class="btn-carroussel prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button type="button" class="btn-carroussel next" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
-    
+            
+            <input type="hidden" name="petImg" id="hiddenPetImg">
+            <input type="hidden" name="toyImg" id="hiddenToyImg">
+            <input type="hidden" name="bedImg" id="hiddenBedImg">
+            
             <!-- Button to confirm the informations -->
-            <button class="buttonStart" onclick="saveTamagotchiData()">
-                <a href="formsAction.html">Começar</a>
+            <button type="submit" class="buttonStart" onclick="return saveTamagotchiData()">
+                Começar
             </button>
-        </div>
+        </form>
     </div>
 
     <script src="../Scripts/Script.js"></script>

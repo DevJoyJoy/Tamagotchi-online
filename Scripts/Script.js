@@ -33,8 +33,14 @@ function moveSlide(button, direction) {
 //===========================================================================
 function saveTamagotchiData() {
     // Getting the values on the inputs
-    const ownerName = document.getElementById('ownerName').value || 'Dono';
-    const petName = document.getElementById('petName').value || 'Bichinho';
+    const ownerName = document.getElementById('ownerName').value.trim();
+    const petName = document.getElementById('petName').value.trim();
+
+    // Not letting anything happen if pet/owner doesn't exist
+    if (ownerName === "" || petName === "") {
+        alert("Por favor, preencha todos os campos obrigatórios (*)");
+        return false;
+    }
 
     // Getting each carroussel in order
     const containers = document.querySelectorAll('.carroussel-container');
@@ -49,19 +55,17 @@ function saveTamagotchiData() {
     const bedIdx = parseInt(bedContainer.dataset.index) || 0;
 
     // Getting the image on the carroussel by index
-    const selectedPet = petContainer.children[petIdx].getAttribute('src');
-    const selectedToy = toyContainer.children[toyIdx].getAttribute('src');
-    const selectedBed = bedContainer.children[bedIdx].getAttribute('src');
+    const rawPet = petContainer.querySelectorAll("img")[petIdx].src;
+    const rawToy = toyContainer.querySelectorAll("img")[toyIdx].src;
+    const rawBed = bedContainer.querySelectorAll("img")[bedIdx].src;
 
     // Saving the info on the localStorage
-    localStorage.setItem('tamagotchiOwner', ownerName);
-    localStorage.setItem('tamagotchiPetName', petName);
-    localStorage.setItem('tamagotchiPetImg', selectedPet);
-    localStorage.setItem('tamagotchiToyImg', selectedToy);
-    localStorage.setItem('tamagotchiBedImg', selectedBed);
+    document.getElementById("hiddenPetImg").value = rawPet;
+    document.getElementById("hiddenToyImg").value = rawToy;
+    document.getElementById("hiddenBedImg").value = rawBed;
 
     // Sending the user to their pets page
-    window.location.href = "formsAction.html";
+    return true;
 }
 
 //===========================================================================
@@ -71,23 +75,37 @@ function loadTamagotchi() {
     // Making sure that we are on the right page
     if (document.getElementById('petDisplay')) {
         
-        // Getting all the info from the local storage
-        const ownerName = localStorage.getItem('tamagotchiOwner');
-        const petName = localStorage.getItem('tamagotchiPetName');
-        const petImg = localStorage.getItem('tamagotchiPetImg');
-        const bedImg = localStorage.getItem('tamagotchiBedImg');
-        const toyImg = localStorage.getItem('tamagotchiToyImg');
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Getting all the info from GET
+        const ownerName = urlParams.get('ownerName');
+        const petName = urlParams.get('petName');
+        const petImg = urlParams.get('petImg');
+        const bedImg = urlParams.get('bedImg');
+        const toyImg = urlParams.get('toyImg');
 
         // Fixing the images by the info that we got
         if (ownerName) document.getElementById('ownerNameDisplay').innerText = ownerName;
         if (petName) document.getElementById('petNameDisplay').innerText = petName;
-        if (petImg) document.getElementById('petDisplay').src = petImg;
-        if (bedImg) document.getElementById('bedDisplay').src = bedImg;
         
+        const getFileName = (path) => path ? path.split('/').pop() : null;
+
         // Fixing the toy to the pets favourite toy
+        if (petImg) {
+            const petFile = getFileName(petImg);
+            document.getElementById('petDisplay').src = `../Images/Pets/${petFile}`;
+        }
+        if (bedImg) {
+            const bedFile = getFileName(bedImg);
+            document.getElementById('bedDisplay').src = `../Images/Beds/${bedFile}`;
+            
+            const bedBtnImg = document.querySelector('#sleepPlay img');
+            if (bedBtnImg) bedBtnImg.src = `../Images/Beds/${bedFile}`;
+        }
         if (toyImg) {
-            const toyButtonImg = document.querySelector('.actionButton img[src*="Toys"]');
-            if (toyButtonImg) toyButtonImg.src = toyImg;
+            const toyFile = getFileName(toyImg);
+            const toyBtnImg = document.querySelector('#btnPlay img');
+            if (toyBtnImg) toyBtnImg.src = `../Images/Toys/${toyFile}`;
         }
     }
 }
@@ -107,8 +125,11 @@ window.addEventListener("DOMContentLoaded", () => {
     // Animate after having all the items
     if (btnPlay && pet && animatedToy) {
         btnPlay.addEventListener('click', () => {
-            const favoriteToy = localStorage.getItem('tamagotchiToyImg') || '../Images/Toys/ColorfulRope.png'
-            animatedToy.src = favoriteToy;
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const toyFile = urlParams.get("toyImg");
+
+            animatedToy.src = toyFile || "../Images/Toys/ColorfulRope.png";
 
             pet.classList.add('petPlayEffect');
             animatedToy.classList.add('toyFlyEffect')
