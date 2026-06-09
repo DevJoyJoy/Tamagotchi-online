@@ -90,7 +90,7 @@ function loadTamagotchi() {
         
         const getFileName = (path) => path ? path.split('/').pop() : null;
 
-        // Fixing the toy to the pets favourite toy
+        // Fixing the images to the pets appropriate images
         if (petImg) {
             const petFile = getFileName(petImg);
             document.getElementById('petDisplay').src = `../Images/Pets/${petFile}`;
@@ -125,6 +125,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // Animate after having all the items
     if (btnPlay && pet && animatedToy) {
         btnPlay.addEventListener('click', () => {
+            // Getting the image for the animation
             const urlParams = new URLSearchParams(window.location.search);
 
             const toyFile = urlParams.get("toyImg");
