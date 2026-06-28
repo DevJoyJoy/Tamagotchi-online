@@ -1,14 +1,18 @@
-<!-- configuration for the database -->
-
 <?php
-    $host = 'localhost';
-    $dbname = 'tamagotchi';
-    $username = 'root';
-    $password = '';
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $database = "tamagotchi";
 
-    try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    } catch (PDOException $e) {
-        die("Erro na conexão com o banco de dados: " . $e->getMessage());
+    $conn = new mysqli(
+        $host,
+        $user,
+        $password,
+        $database
+    );
+
+    if($conn->connect_error){
+        die("Erro");
     }
+
 ?>

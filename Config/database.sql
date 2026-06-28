@@ -1,24 +1,20 @@
-CREATE DATABASE tamagotchi;
-USE tamagotchi;
+CREATE DATABASE tamagotchi
 
-CREATE TABLE users (
+CREATE TABLE tamagotchiUsers(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    userPassword VARCHAR(255) NOT NULL,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    username VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    userPassword VARCHAR(255)
 );
 
-CREATE TABLE pets (
+CREATE TABLE pets(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    userId INT NOT NULL,
-    petName VARCHAR(50) NOT NULL,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
+    userID INT UNIQUE,
+    petName VARCHAR(100),
+    pet_img VARCHAR(255),
+    toy_img VARCHAR(255),
+    bed_img VARCHAR(255),
+
+    FOREIGN KEY(userID)
+    REFERENCES tamagotchiUsers(id)
 );
-
-INSERT INTO users (username, email, userPassword) VALUES 
-('jogador1', 'jogador1@gmail.com', 'senha1234');
-
-INSERT INTO pets (userId, petName) VALUES 
-(1, 'Cocada');

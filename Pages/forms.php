@@ -27,7 +27,7 @@
     <div class="background">
 
         <!-- Pink box with all the inputs to create the pet -->
-        <form class="boxInputs" method="GET" action="formsAction.html">
+        <form class="boxInputs" method="POST" action="../Config/savePet.php">
             <!-- Align the text inputs and the pets carroussel -->
             <div class="firstRow">   
                 <div>
