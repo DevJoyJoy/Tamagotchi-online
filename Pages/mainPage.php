@@ -10,7 +10,7 @@
 <body>
     <div class="header">
         <img src="./Images/Icons/PurpleStar.png" alt="">
-        <p><a href="./index.html">Tamagotchi.online</a></p>
+        <p><a href="./mainPage.php">Tamagotchi.online</a></p>
         <img src="./Images/Icons/YellowStar.png" alt="">
     </div>
     <!-- Div for the background -->
@@ -25,21 +25,21 @@
             <ul class="options">
 
                 <li class="option">
-                    <a href="./Pages/forms.html">
+                    <a href="./Pages/forms.php">
                         <img src="./Images/Icons/PinkStar.png" alt="">
                         Começar
                     </a>
                 </li>
 
                 <li class="option">
-                    <a href="./Pages/options.html">
+                    <a href="./Pages/options.php">
                         <img src="./Images/Icons/YellowStar.png" alt="">
                         Opções
                     </a>
                 </li>
 
                 <li class="option">
-                    <a href="./Pages/about.html">
+                    <a href="./Pages/about.php">
                         <img src="./Images/Icons/BlueStar.png" alt="">
                         Sobre
                     </a>

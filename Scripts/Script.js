@@ -33,11 +33,10 @@ function moveSlide(button, direction) {
 //===========================================================================
 function saveTamagotchiData() {
     // Getting the values on the inputs
-    const ownerName = document.getElementById('ownerName').value.trim();
     const petName = document.getElementById('petName').value.trim();
 
     // Not letting anything happen if pet/owner doesn't exist
-    if (ownerName === "" || petName === "") {
+    if (petName === "") {
         alert("Por favor, preencha todos os campos obrigatórios (*)");
         return false;
     }

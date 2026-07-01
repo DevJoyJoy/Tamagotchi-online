@@ -11,16 +11,16 @@
     <!-- Header with the title -->
     <div class="header">
         <img src="../Images/Icons/PurpleStar.png" alt="">
-        <p><a href="./index.html">Tamagotchi.online</a></p>
+        <p><a href="./mainPage.php">Tamagotchi.online</a></p>
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
     <!-- Menu with the other pages -->
     <div class="menu">
-        <a href="../index.html">Página inicial</a>
-        <a href="./about.html">Sobre o site</a>
-        <a href="./options.html">Opções</a>
-        <a href="./forms.html">Criar pet</a>
+        <a href="../mainPage.php">Página inicial</a>
+        <a href="./about.php">Sobre o site</a>
+        <a href="./options.php">Opções</a>
+        <a href="./forms.php">Criar pet</a>
     </div>
 
     <!-- Background color -->

@@ -1,0 +1,64 @@
+/* Style for the background */
+.background {
+    width: 97.2vw; 
+    min-height: 84vh;
+    background-image: linear-gradient(rgba(46, 46, 46, 0.400), rgba(46, 46, 46, 0.400)), url("../Images/Backgrounds/Farm.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    padding: 3vh;
+    overflow-x: hidden;
+}
+
+/* Pink box with the inputs */
+.boxInputs {
+    width: 37vw;
+    height: 60vh;
+    background-color: #ffb3c6;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+}
+
+/* Style fot the inputs box */
+.boxInputs input{
+    width: 30vw;
+    border-radius: 10px;
+    border: none;
+    padding: 1vh;
+    font-size: large;
+    color: gray;
+}
+
+/* Style for the titles */
+.titles {
+    font-size: x-large;
+}
+
+/* Style for the start button */
+.buttonStart {
+    width: 60%;
+    height: 10%;
+    background-color: #ff8fab;
+    font-size: x-large;
+    border: none;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.buttonStart a {
+    text-decoration: none;
+}
+
+.buttonStart:hover{
+    background-color: #ad6879;
+}

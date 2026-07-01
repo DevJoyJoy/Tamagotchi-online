@@ -1,3 +1,28 @@
+<?php
+    require "../Config/auth.php";
+    require "../Config/config.php";
+
+    $id = $_SESSION["id"];
+
+    $sql = "SELECT
+    tamagotchiUsers.username,
+    pets.petName,
+    pets.pet_img,
+    pets.toy_img,
+    pets.bed_img
+
+    FROM tamagotchiUsers
+    INNER JOIN pets
+    ON tamagotchiUsers.id = pets.userID
+    WHERE tamagotchiUsers.id=?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i",$id);
+    $stmt->execute();
+    $pet = $stmt->get_result()->fetch_assoc();
+
+?> 
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,21 +36,21 @@
     <!-- Header on top of the page -->
     <div class="header">
         <img src="../Images/Icons/PurpleStar.png" alt="">
-        <p><a href="../index.html">Tamagotchi.online</a></p>
+        <p><a href="../mainPage.php">Tamagotchi.online</a></p>
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
     <!-- Farm background -->
     <div class="background">
         <!-- Title with the name of the player and the pet -->
-        <p>Tamagotchi da <span id="ownerNameDisplay">*dona*</span> | Pet: <span id="petNameDisplay">*pet*</span></p>
+        <p>Tamagotchi da <span id="ownerNameDisplay"><?= $pet["username"] ?></span> | Pet: <span id="petNameDisplay"><?= $pet["petName"] ?></span></p>
 
         <!-- Box with all the game elements -->
         <div class="objectsBox">
             <!-- Reserve images in case the player doesn't have a pet yet  -->
-            <img id="bedDisplay" src="../Images/Beds/Blue.png" alt="">
-            <img id="petDisplay" src="../Images/Pets/CalicoCat.png" alt="">
-            <img id="toyAnimationDisplay" src="" alt="" class="toyAnimation">
+            <img id="bedDisplay" src="<?= $pet["bed_img"] ?>" alt="">
+            <img id="petDisplay" src="<?= $pet["pet_img"] ?>" alt="">
+            <img id="toyAnimationDisplay" src="<?= $pet["toy_img"] ?>" alt="" class="toyAnimation">
             <img id="treatAnimationDisplay" src="" alt="" class="toyAnimation">
 
             <!-- Pink box with the animation options -->

@@ -1,3 +1,6 @@
+<?php
+require "../Config/auth.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,28 +14,28 @@
     <!-- Header on top of the page -->
     <div class="header">
         <img src="../Images/Icons/PurpleStar.png" alt="">
-        <p><a href="../index.html">Tamagotchi.online</a></p>
+        <p><a href="../mainPage.php">Tamagotchi.online</a></p>
         <img src="../Images/Icons/YellowStar.png" alt="">
     </div>
 
     <!-- Menu with the other pages -->
     <div class="menu">
-        <a href="../index.html">Página inicial</a>
-        <a href="./about.html">Sobre o site</a>
-        <a href="./options.html">Opções</a>
-        <a href="./forms.html">Criar pet</a>
+        <a href="../mainPage.php">Página inicial</a>
+        <a href="./about.php">Sobre o site</a>
+        <a href="./options.php">Opções</a>
+        <a href="./forms.php">Criar pet</a>
     </div>
 
     <!-- Div for the background -->
     <div class="background">
 
         <!-- Pink box with all the inputs to create the pet -->
-        <form class="boxInputs" method="GET" action="formsAction.html">
+        <form class="boxInputs" method="POST" action="../Config/savePet.php">
             <!-- Align the text inputs and the pets carroussel -->
             <div class="firstRow">   
                 <div>
                     <p class="titles">Seu nome*</p>
-                    <input type="text" name="ownerName" id="ownerName" placeholder="Digite seu nome: " required>
+                    <input type="text" name="ownerName" id="ownerName" value="<?= $_SESSION['nome'] ?>" placeholder="Digite seu nome: " required readonly>
                     <br><br>
                     <p class="titles">Nome do pet*</p>
                     <input type="text" name="petName" id="petName" placeholder="Digite o nome do pet: " required>
