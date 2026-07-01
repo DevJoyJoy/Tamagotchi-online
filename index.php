@@ -9,6 +9,7 @@
 </head>
 <body>
     <!-- Header on top of the page -->
+
     <div class="header">
         <img src="./Images/Icons/PurpleStar.png" alt="">
         <p><a href="./mainPage.php">Tamagotchi.online</a></p>
@@ -42,5 +43,6 @@
     </div>
 
     <script src="../Scripts/Script.js"></script>
+
 </body>
 </html>
