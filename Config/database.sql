@@ -1,6 +1,6 @@
 CREATE DATABASE tamagotchi;
 
-CREATE TABLE tamagotchiUsers(
+CREATE TABLE user(
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100),
     email VARCHAR(100) UNIQUE,
@@ -16,5 +16,11 @@ CREATE TABLE pets(
     bed_img VARCHAR(255),
 
     FOREIGN KEY(userID)
-    REFERENCES tamagotchiUsers(id)
+    REFERENCES user(id)
 );
+
+select * from user;
+select * from pets;
+
+drop table tamagotchiusers;
+drop table pets;

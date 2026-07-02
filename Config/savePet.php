@@ -3,7 +3,7 @@
     require "config.php";
 
     if (!isset($_SESSION["id"])) {
-        header("Location: ../Pages/login.php");
+        header("Location: ../index.php");
         exit();
     }
 

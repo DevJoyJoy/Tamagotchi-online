@@ -5,7 +5,7 @@
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    $sql = "SELECT * FROM tamagotchiUsers
+    $sql = "SELECT * FROM user
             WHERE email=?";
 
     $stmt = $conn->prepare($sql);
