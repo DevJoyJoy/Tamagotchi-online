@@ -5,16 +5,16 @@
     $id = $_SESSION["id"];
 
     $sql = "SELECT
-    tamagotchiUsers.username,
+    user.username,
     pets.petName,
     pets.pet_img,
     pets.toy_img,
     pets.bed_img
 
-    FROM tamagotchiUsers
+    FROM user
     INNER JOIN pets
-    ON tamagotchiUsers.id = pets.userID
-    WHERE tamagotchiUsers.id=?";
+    ON user.id = pets.userID
+    WHERE user.id=?";
 
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i",$id);

@@ -19,7 +19,7 @@
     <div class="background">
 
         <!-- Pink box with all the inputs to login -->
-        <form class="boxInputs" method="POST" action="./Pages/register.php">
+        <form class="boxInputs" method="POST" action="./Config/register.php">
             <!-- Align the text inputs -->
             <h1>Cadastre-se para começar!</h1>
             <br>

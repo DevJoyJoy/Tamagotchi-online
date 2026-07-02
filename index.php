@@ -32,14 +32,14 @@
             <br><br>
 
             <!-- Buttons to login and create account -->
-            <button class="buttonStart" href="./Pages/register.php">
-                Não possui conta? Crie uma!
-            </button>
-            <br>
             <button type="submit" class="buttonStart">
                 Começar
             </button>
+            <br>
         </form>
+            <button class="buttonStart" href="./Pages/register.php">
+                Não possui conta? Crie uma!
+            </button>
     </div>
 
     <script src="../Scripts/Script.js"></script>
