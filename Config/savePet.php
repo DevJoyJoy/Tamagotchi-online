@@ -1,3 +1,4 @@
+<!-- Saving the info of the new user pet int the database -->
 <?php
     session_start();
     require "config.php";

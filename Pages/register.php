@@ -19,29 +19,32 @@
     <div class="background">
 
         <!-- Pink box with all the inputs to login -->
-        <form class="boxInputs" method="POST" action="./Config/register.php">
-            <!-- Align the text inputs -->
-            <h1>Cadastre-se para começar!</h1>
-            <br>
-            <p class="titles">Nome do usuário:</p>
-            <input type="text" name="username" placeholder="Digite seu nome: " required>
-            <br><br>
-            <p class="titles">Email do usuário:</p>
-            <input type="text" name="email" placeholder="Digite seu email: " required>
-            <br><br>
-            <p class="titles">Senha:</p>
-            <input type="password" name="userPassword" placeholder="Digite sua senha: " required>
-            <br><br>
-
-            <!-- Buttons to login and create account -->
-            <a href="../index.php" class="buttonStart">
-                Já possui conta? Faça login!
-            </a>
-            <br>
-            <a href="../index.php" type="submit" class="buttonStart">
-                Criar
-            </a>
-        </form>
+        <div class="boxInputs">
+            <!-- Forms to collect all the info -->
+            <form method="POST" action="./Config/register.php">
+                <!-- Align the text inputs -->
+                <h1>Cadastre-se para começar!</h1>
+                <br>
+                <p class="titles">Nome do usuário:</p>
+                <input type="text" name="username" placeholder="Digite seu nome: " required>
+                <br><br>
+                <p class="titles">Email do usuário:</p>
+                <input type="text" name="email" placeholder="Digite seu email: " required>
+                <br><br>
+                <p class="titles">Senha:</p>
+                <input type="password" name="userPassword" placeholder="Digite sua senha: " required>
+                <br><br>
+    
+                <!-- Buttons to login and create account -->
+                <a href="../index.php" class="buttonStart">
+                    Já possui conta? Faça login!
+                </a>
+                <br>
+                <a href="../index.php" type="submit" class="buttonStart">
+                    Criar
+                </a>
+            </form>
+        </div>
     </div>
 
     <script src="../Scripts/Script.js"></script>

@@ -1,3 +1,4 @@
+<!-- Creating a new user in the database  -->
 <?php
 require "config.php";
 

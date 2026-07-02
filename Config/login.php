@@ -1,3 +1,4 @@
+<!-- Verification in the database if the user exists and logging the user if they exist -->
 <?php
     require "config.php";
     session_start();

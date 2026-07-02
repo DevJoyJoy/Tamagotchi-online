@@ -1,3 +1,4 @@
+<!-- Checking in the database the user's info and if they are logged in -->
 <?php
     require "../Config/auth.php";
     require "../Config/config.php";
